@@ -9,7 +9,7 @@ images = os.listdir('images')
 print(images)
 
 
-images_to_be_matched = ['pewdiepie.jpg']
+images_to_be_matched = ['President_Barack_Obama.jpg']
 
 try:
     for i in images_to_be_matched:

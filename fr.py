@@ -21,8 +21,8 @@ try:
             # encoded the loaded image into a feature vector
             image_to_be_matched_encoded = face_recognition.face_encodings(
                 image_to_be_matched)[0]
-        except IndexError:
-            print(i + " does not contain a face")
+        except FileNotFound:
+            print(i + " is not a file")
             continue
 
         # iterate over each image

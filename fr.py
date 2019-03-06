@@ -5,18 +5,14 @@ import face_recognition
 # make a list of all the available images
 images = os.listdir('images')
 
-
-print(images)
-
-
-images_to_be_matched = ['President_Barack_Obama.jpg']
+known_faces = os.listdir('known')
 
 try:
-    for i in images_to_be_matched:
+    for i in known_faces:
         print("Analyzing '" + i + "'...")
         try:
             # load your image
-            image_to_be_matched = face_recognition.load_image_file(i)
+            image_to_be_matched = face_recognition.load_image_file('known/' + i)
 
             # encoded the loaded image into a feature vector
             image_to_be_matched_encoded = face_recognition.face_encodings(
